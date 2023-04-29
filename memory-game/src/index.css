@@ -1,0 +1,22 @@
+@import './styles/themeVariables/colors.css';
+@import './styles/themeVariables/fonts.css';
+@import './styles/themeVariables/sizes.css';
+
+@font-face {
+  font-family: clockFont;
+  src: url('./styles/assets/fonts/BebasNeue-Regular.ttf');
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
