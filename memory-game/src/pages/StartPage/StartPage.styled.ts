@@ -1,12 +1,16 @@
 import {Box, styled} from "@mui/material";
-export const StyledPageContainer = styled(Box)(() => ({
+import {Breakpoints} from "../../types/Styles";
+export const StyledPageContainer = styled(Box)(({theme}) => ({
     width: '100%',
-    height: '100vh',
+    height: '100%',
     display: 'flex',
     gap: 'var(--size-s)',
     flexDirection:'column',
     alignItems:'center',
     justifyContent: 'center',
+    [theme.breakpoints.down(Breakpoints.l)]: {
+        paddingTop: 'var(--size-xl)',
+    },
 }));
 
 export const StyledBoxContainer = styled(Box)(({theme}) => ({
@@ -18,7 +22,20 @@ export const StyledBoxContainer = styled(Box)(({theme}) => ({
     padding: 'var(--size-l) 0',
     display:'flex',
     flexDirection:'column',
-    alignItems:'center'
+    alignItems:'center',
+
+    [theme.breakpoints.down(Breakpoints.l)]: {
+        width: '70%',
+    },
+
+    [theme.breakpoints.down(Breakpoints.tablet)]: {
+        width: '80%',
+    },
+
+    [theme.breakpoints.down(Breakpoints.mobile)]: {
+        width: '90%',
+    },
+
 }));
 
 

@@ -1,31 +1,32 @@
 :root {
+
     /*--background--*/
-    --color-background-primary-light: #ECF2FF;
+    --color-background-primary-light: #6DF7EC;
     --color-background-primary-dark: #16252C;
-    --color-background-secondary-light: #E5ECF9;
+    --color-background-secondary-light: #AAF9F3;
     --color-background-secondary-dark: #1A2F37;
-    --color-background-shadow-light: #E5ECF9;
+    --color-background-shadow-light: #00BCB5;
     --color-background-shadow-dark: #101A1F;
+
     /*--cards--*/
     --color-text-button: #162A33;
     --color-card-first: #F5A741;
     --color-shadow-first: #A98224;
+    --color-disabled-first: #E28413;
     --color-card-second: #40C4BE;
     --color-shadow-second: #2B8A86;
+    --color-disabled-second: #1BAFA4;
     --color-card-third: #A8BEC9;
     --color-shadow-third: #6C8895;
+    --color-disabled-third: #9EAFB5;
+
+    /*--score--*/
+    --color-score-light: #162A33;
+    --color-score-dark: #9BB6C1;
 
     /*--neutral--*/
-    --color-neutral-light:#9BB6C1;
+    --color-neutral-light:#E8EDEF;
     --color-neutral-dark:#9BB6C1;
-    --color-neutral-heart-light:#F42C8C;
+    --color-neutral-heart-light:#CE2084;
     --color-neutral-heart-dark:#F42C8C;
 }
-/*$dark-navy: #1a2a33;*/
-/*$semi-dark-navy: #1f3641;*/
-/*$silver: #a8bfc9;*/
-/*$silver-hover: #dbe8ed;*/
-/*$light-blue: #31c3bd;*/
-/*$light-blue-hover: #65e9e4;*/
-/*$light-yellow: #f2b137;*/
-/*$light-yellow-hover: #ffc860;*/

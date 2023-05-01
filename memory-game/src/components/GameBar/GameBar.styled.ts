@@ -8,7 +8,7 @@ export const StyledGameBar = styled(Box)(({theme}) => ({
     alignItems: 'center',
     width: 'cover',
     borderRadius: "0 0 25px 0",
-    boxShadow: "inset 0px -6px 0px #101A1F"
+    boxShadow: `inset 0px -6px 0px var(--color-background-shadow-${theme.palette.mode})`
 }));
 
 export const StyledTimer = styled(Box)(({theme}) => ({

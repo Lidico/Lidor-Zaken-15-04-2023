@@ -1,39 +1,26 @@
 import {ReactNode} from "react";
+import {Card} from "../Card/Card.models";
 
+export const BY_FIVE = 5;
 export type Shape = 'X'|'O'|'V'|'U'|'Z';
 export interface GameContainerProps {
     children: ReactNode
 }
 
+
 export interface GameProps {
     CardArray: Shape[];
     id: string;
-}
-
-export interface CardProps {
-    shape: Shape
+    name: string;
 }
 
 export interface gameContainerReducerProps {
-    game: Game | null
+    game: Game | null,
+    turns: number;
+    score: number
 }
 
-export class Card {
-    shape: Shape;
-    isOnFlip: boolean;
-    isFound: boolean;
 
-    constructor({
-                    shape
-                }: CardProps
-    ) {
-        console.log(shape)
-        this.shape = shape;
-        this.isOnFlip = false;
-        this.isFound = false;
-
-    }
-}
 
 export interface CardListProps {
     list: Shape[];
@@ -58,34 +45,51 @@ export class CardList {
             [this.list[i], this.list[j]] = [this.list[j], this.list[i]];
         }
     }
+    flipAllBack () {
+        this.list.forEach(card=>{
+            card.isOnFlip = false;
+        })
+    }
+    found (shape:Shape) {
+        this.list.forEach(card=>{
+            if(card.shape===shape){
+                card.isFound = true;
+            }
+        })
+    }
 }
 
 export class Game {
     id: string;
     time: number;
     isWon: boolean;
-    turns: number;
     cards: CardList;
     isGameActivate: boolean;
+    name: string
 
     constructor({
                     CardArray,
                     id,
+                    name
                 }: GameProps
     ) {
         this.id = id;
+        this.name = name;
         this.time = 60;
         this.isGameActivate = false;
         this.isWon = false;
-        this.turns = 6;
         this.cards =  new CardList({list:CardArray});
     }
-    getTurns() {
-        return this.turns;
-    }
 
+    getTime() {
+        return this.time;
+    }
     activateGame(){
         this.isGameActivate = true;
     }
+    gameOver(){
+        this.isGameActivate = false;
+    }
+
 }
 

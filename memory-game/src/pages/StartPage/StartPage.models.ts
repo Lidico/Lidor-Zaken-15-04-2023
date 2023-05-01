@@ -1,3 +1,3 @@
 export interface StartPageViewerProps {
-    gameID: string
+    gameID: string,
 }

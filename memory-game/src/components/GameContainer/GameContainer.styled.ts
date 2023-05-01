@@ -4,5 +4,6 @@ export const StyledGameContainer = styled(Box)(({theme}) => ({
     display:'flex',
     flexDirection: 'column',
     width: 'cover',
-    height: '100vh',
+    minHeight: '100vh',
+    height: '100%'
 }));

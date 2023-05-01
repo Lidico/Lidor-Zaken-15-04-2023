@@ -3,7 +3,7 @@ import {StyledButton} from "./Button.styled";
 
 interface ButtonProps {
     type: 'yellow'|'green'|'default',
-    onClick: ()=>void,
+    onClick?: ()=>void,
     disabled?:boolean,
     children: ReactNode,
     width?: string,

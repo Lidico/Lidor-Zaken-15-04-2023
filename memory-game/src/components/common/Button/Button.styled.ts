@@ -24,7 +24,6 @@ export const StyledButton = styled(Button)<StyledButtonProps>(({width, buttonTyp
     },
 
     "&:disabled": {
-        color: "#FFFFFF !important",
-        background: "#C1C7CD !important"
+        background: buttonType==='yellow'?'var(--color-disabled-first)':(buttonType==='green'?'var(--color-disabled-second)':'var(--color-disabled-third)')
     },
 }));

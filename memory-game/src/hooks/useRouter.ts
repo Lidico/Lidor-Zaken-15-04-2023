@@ -2,8 +2,10 @@ import { useMemo } from "react";
 import {
     useParams,
     useLocation,
-    useNavigate
+    useNavigate,
+    redirect
 } from "react-router-dom";
+
 import queryString from "query-string";
 
 export const useRouter = () => {
@@ -17,6 +19,7 @@ export const useRouter = () => {
                 ...queryString.parse(location.search),
                 ...params
             },
+            redirect,
             location,
             history
         };
