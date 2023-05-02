@@ -1,6 +1,6 @@
 import {Box, styled} from "@mui/material";
 import {Breakpoints} from "../../types/Styles";
-export const StyledPageContainer = styled(Box)(({theme}) => ({
+export const StyledPageContainer = styled(Box)(() => ({
     width: '100%',
     height: '100%',
     display: 'flex',
@@ -8,9 +8,7 @@ export const StyledPageContainer = styled(Box)(({theme}) => ({
     flexDirection:'column',
     alignItems:'center',
     justifyContent: 'center',
-    [theme.breakpoints.down(Breakpoints.l)]: {
-        paddingTop: 'var(--size-xl)',
-    },
+    paddingTop: 'var(--size-xl)',
 }));
 
 export const StyledBoxContainer = styled(Box)(({theme}) => ({

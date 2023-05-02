@@ -4,7 +4,9 @@ import LeaderBoardViewer from "./LeaderBoard.viewer";
 const LeaderBoardController:React.FC = () => {
     const [board, setBoard] = useState([])
     useEffect(()=>{
-        const leaderBoard = JSON.parse(localStorage.getItem('board')??'')
+        const boardData = localStorage.getItem('board')
+        if(boardData) {
+            const leaderBoard = JSON.parse(boardData)
             if(leaderBoard) {
                 const sorted = leaderBoard.sort((a, b) => {
                     if (a.turns === b.turns) {
@@ -15,6 +17,7 @@ const LeaderBoardController:React.FC = () => {
                 });
                 setBoard(sorted)
             }
+        }
     },[])
     return (
         <LeaderBoardViewer board={board}/>
